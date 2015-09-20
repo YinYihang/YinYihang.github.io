@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+
+    <title>Aaron.yee  | 关于 Hexo ，也就是那些事儿 </title>
+
+    <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+    <style>
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,pre,section,summary{display:block}.main-content article.abstract,.main-content h1,.main-content h2,.main-content h3,.main-content h4,.main-content h5,.main-content h6,blockquote{border-bottom:1px solid #272626}@font-face{font-family:'Fira Mono';src:url(/fonts/FiraMono-3.2/FiraMono-Bold.eot),url(/fonts/FiraMono-3.2/FiraMono-Bold.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraMono-3.2/FiraMono-Bold.woff2)format("woff2"),url(/fonts/FiraMono-3.2/FiraMono-Bold.woff)format("woff"),url(/fonts/FiraMono-3.2/FiraMono-Bold.ttf)format("truetype");font-weight:700;font-style:normal}@font-face{font-family:'Fira Mono';src:url(/fonts/FiraMono-3.2/FiraMono-Medium.eot),url(/fonts/FiraMono-3.2/FiraMono-Medium.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraMono-3.2/FiraMono-Medium.woff2)format("woff2"),url(/fonts/FiraMono-3.2/FiraMono-Medium.woff)format("woff"),url(/fonts/FiraMono-3.2/FiraMono-Medium.ttf)format("truetype");font-weight:500;font-style:normal}@font-face{font-family:'Fira Mono';src:url(/fonts/FiraMono-3.2/FiraMono-Regular.eot),url(/fonts/FiraMono-3.2/FiraMono-Regular.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraMono-3.2/FiraMono-Regular.woff2)format("woff2"),url(/fonts/FiraMono-3.2/FiraMono-Regular.woff)format("woff"),url(/fonts/FiraMono-3.2/FiraMono-Regular.ttf)format("truetype");font-weight:400;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-Bold.eot),url(/fonts/FiraSans-4.1/FiraSans-Bold.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-Bold.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-Bold.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-Bold.ttf)format("truetype");font-weight:700;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-BoldItalic.eot),url(/fonts/FiraSans-4.1/FiraSans-BoldItalic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-BoldItalic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-BoldItalic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-BoldItalic.ttf)format("truetype");font-weight:700;font-style:italic}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-ExtraBold.eot),url(/fonts/FiraSans-4.1/FiraSans-ExtraBold.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-ExtraBold.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-ExtraBold.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-ExtraBold.ttf)format("truetype");font-weight:800;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-ExtraBoldItalic.eot),url(/fonts/FiraSans-4.1/FiraSans-ExtraBoldItalic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-ExtraBoldItalic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-ExtraBoldItalic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-ExtraBoldItalic.ttf)format("truetype");font-weight:800;font-style:italic}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-Heavy.eot),url(/fonts/FiraSans-4.1/FiraSans-Heavy.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-Heavy.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-Heavy.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-Heavy.ttf)format("truetype");font-weight:900;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-HeavyItalic.eot),url(/fonts/FiraSans-4.1/FiraSans-HeavyItalic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-HeavyItalic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-HeavyItalic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-HeavyItalic.ttf)format("truetype");font-weight:900;font-style:italic}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-Italic.eot),url(/fonts/FiraSans-4.1/FiraSans-Italic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-Italic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-Italic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-Italic.ttf)format("truetype");font-weight:4.1;font-style:italic}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-Light.eot),url(/fonts/FiraSans-4.1/FiraSans-Light.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-Light.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-Light.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-Light.ttf)format("truetype");font-weight:300;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-LightItalic.eot),url(/fonts/FiraSans-4.1/FiraSans-LightItalic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-LightItalic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-LightItalic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-LightItalic.ttf)format("truetype");font-weight:300;font-style:italic}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-Medium.eot),url(/fonts/FiraSans-4.1/FiraSans-Medium.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-Medium.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-Medium.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-Medium.ttf)format("truetype");font-weight:500;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-MediumItalic.eot),url(/fonts/FiraSans-4.1/FiraSans-MediumItalic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-MediumItalic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-MediumItalic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-MediumItalic.ttf)format("truetype");font-weight:500;font-style:italic}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-Regular.eot),url(/fonts/FiraSans-4.1/FiraSans-Regular.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-Regular.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-Regular.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-Regular.ttf)format("truetype");font-weight:400;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-SemiBold.eot),url(/fonts/FiraSans-4.1/FiraSans-SemiBold.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-SemiBold.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-SemiBold.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-SemiBold.ttf)format("truetype");font-weight:600;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-SemiBoldItalic.eot),url(/fonts/FiraSans-4.1/FiraSans-SemiBoldItalic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-SemiBoldItalic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-SemiBoldItalic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-SemiBoldItalic.ttf)format("truetype");font-weight:600;font-style:italic}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-Thin.eot),url(/fonts/FiraSans-4.1/FiraSans-Thin.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-Thin.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-Thin.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-Thin.ttf)format("truetype");font-weight:100;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-ThinItalic.eot),url(/fonts/FiraSans-4.1/FiraSans-ThinItalic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-ThinItalic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-ThinItalic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-ThinItalic.ttf)format("truetype");font-weight:100;font-style:italic}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-UltraLight.eot),url(/fonts/FiraSans-4.1/FiraSans-UltraLight.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-UltraLight.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-UltraLight.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-UltraLight.ttf)format("truetype");font-weight:200;font-style:normal}@font-face{font-family:'Fira Sans';src:url(/fonts/FiraSans-4.1/FiraSans-UltraLightItalic.eot),url(/fonts/FiraSans-4.1/FiraSans-UltraLightItalic.eot?#iefix)format("embedded-opentype"),url(/fonts/FiraSans-4.1/FiraSans-UltraLightItalic.woff2)format("woff2"),url(/fonts/FiraSans-4.1/FiraSans-UltraLightItalic.woff)format("woff"),url(/fonts/FiraSans-4.1/FiraSans-UltraLightItalic.ttf)format("truetype");font-weight:200;font-style:italic}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}pre,pre code{font-size:1rem}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:none}.main-content section#facts{z-index:0;padding:1em 1em 1.4em;-moz-transition:all .5s ease;-o-transition:all .5s ease;-webkit-transition:all .5s ease;transition:all .5s ease}#sidebar .leaver .trigger,#sidebar .leaver .trigger div{position:absolute;transition:all .3s ease;-webkit-transition:all .3s ease}@media (min-width:64rem){.main-content section#facts{padding:1em 2em 1.4em}}code{padding:2px 4px;border:1px solid #e1e1e8;white-space:nowrap}pre,pre code{white-space:pre}pre{padding:9.5px;margin:0 0 10px;line-height:20px;overflow:scroll;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15)}pre.prettyprint{margin-bottom:20px}pre code{font-family:"Fira Mono","Droid Sans Mono",Monaco,Menlo,Consolas,"Courier New",monospace;padding:0;color:inherit;background-color:transparent;border:0}code,pre{color:#ccc;background-color:#303030}code>span.kw{color:#f0dfaf}code>span.dt{color:#dfdfbf}code>span.dv{color:#dcdccc}code>span.bn{color:#dca3a3}code>span.fl{color:#c0bed1}code>span.ch{color:#dca3a3}code>span.st{color:#cc9393}code>span.co{color:#7f9f7f}code>span.ot{color:#efef8f}code>span.al{color:#ffcfaf}code>span.fu{color:#efef8f}code>span.er{color:#c3bf9f}.main-content .fn{font-weight:500}.main-content article>*>:last-child{padding-bottom:0}.main-content div.more{text-align:right}.main-content article header{padding-top:1em;padding-bottom:0}.main-content article header .date{font-size:.75em;font-weight:300}.main-content article footer .meta-info{padding:.5em 0;border-bottom:1px solid #272626;border-top:1px solid #272626}.main-content #credit,.main-content .background,.main-content h1.section-head,.main-content h1.section-head::before{display:none}@media (min-width:64rem){.main-content #aboutbg #credit a,.main-content #aboutbg #credit a:hover,.main-content #aboutbg #credit a:visited,.main-content #talkbg #credit a,.main-content #talkbg #credit a:hover,.main-content #talkbg #credit a:visited{color:#272626}.main-content #credit a,.main-content #credit a:hover,.main-content #credit a:visited,.main-content h1.section-head{color:#F2F2F2;text-decoration:none}.main-content .background{position:fixed;top:0;right:0;bottom:0;left:45rem;display:block}.main-content #blogbg{background:linear-gradient(to bottom,rgba(39,38,38,0)0,rgba(39,38,38,0)50%,rgba(39,38,38,.25)100%),url(/assets/images/beanbag.jpg)center/cover no-repeat}.main-content #archivebg{background:50%,url(/assets/images/archive.jpg)45%/cover no-repeat}.main-content #contactbg{background:linear-gradient(to bottom,rgba(39,38,38,0)0,rgba(39,38,38,0)50%,rgba(39,38,38,.25)100%),url(/assets/images/mailboxi.jpg)bottom/cover no-repeat}.main-content #tagbg{background:linear-gradient(to bottom,rgba(39,38,38,0)0,rgba(39,38,38,0)50%,rgba(39,38,38,.25)100%),url(/assets/images/indexcardbox.jpg)center/cover no-repeat}.main-content #aboutbg{background:linear-gradient(to bottom,rgba(39,38,38,0)0,rgba(39,38,38,0)50%,rgba(39,38,38,.25)100%),url(/assets/images/SIGINT_Martin_bw_small.jpg)50%/cover no-repeat}.main-content #talkbg{background:linear-gradient(to bottom,rgba(39,38,38,0)0,rgba(39,38,38,0)50%,rgba(39,38,38,.25)100%),url(/assets/images/lecture_hall_bw.jpg)center/cover no-repeat}.main-content #credit{position:absolute;top:-.5em;right:.5em;bottom:auto;left:auto;display:block;width:20rem;font-size:.8em;font-weight:300;text-align:right;-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-webkit-transform:rotate(-90deg);transform:rotate(-90deg);-moz-transform-origin:bottom right;-ms-transform-origin:bottom right;-webkit-transform-origin:bottom right;transform-origin:bottom right;color:#F2F2F2}.main-content h1.section-head{position:fixed;display:block;text-transform:lowercase;font-weight:700;bottom:1.25rem;right:1.5rem;font-size:4rem;margin:0;padding:0;line-height:1;border-bottom:none}.main-content h1.section-head::before{position:absolute;display:block;bottom:.5rem;left:-1.25rem;margin-bottom:3px;content:"";width:1rem;height:1rem;color:#F60A20;background:#F60A20}}@media (min-width:80rem){.main-content h1.section-head{font-size:6rem}.main-content h1.section-head::before{bottom:1rem;margin-bottom:0}}.main-content article>*{padding:1em}@media (min-width:48rem){.main-content footer.meta-info{font-size:1.125rem;padding:.5rem 0;border-bottom:1px solid #272626;border-top:1px solid #272626}}@media (min-width:64rem){.main-content article>*{padding:0 2em 1em}.main-content #article-bg{display:block}}#sidebar footer.details,.main-content.show #more-arrow{display:none}#menu-closer,#menu-opener,.trigger{curser:pointer}#more-arrow{position:fixed;bottom:0;left:20em;width:5em}#more-arrow svg{width:5em;height:5em}.arrow-down{stroke:rgba(242,242,242,.9);fill:none}#lambda{stroke:#F2F2F2;fill:#F2F2F2}#dot{fill:#F60A20;stroke:#F60A20}#sidebar{font-size:.75rem;color:#F2F2F2;background-color:#404040}#sidebar .sidebar-content nav a h1,#sidebar .sidebar-content nav a:visited h1,#sidebar h1{font-size:3em}#sidebar h1{font-weight:700}#sidebar .leaver{position:fixed;top:0;right:0;bottom:auto;left:0;z-index:100;width:100%;height:5em;background-color:#272626}#sidebar .leaver .trigger{top:0;right:auto;bottom:auto;left:0;height:5em;width:5em;overflow:hidden;text-align:center;line-height:2em;-moz-transition:all .3s ease;-o-transition:all .3s ease}#sidebar .leaver .trigger div{width:3em;height:3em;padding:1em;-moz-transition:all .3s ease;-o-transition:all .3s ease;-moz-transform:translate3d(0,-100%,0);-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}#sidebar .leaver .trigger div img{width:3em;height:auto}#sidebar .leaver .trigger .menu-close{top:0;background-color:#F60A20}#sidebar .leaver .trigger .menu{top:5em;left:0;background-color:#404040}#sidebar .leaver footer.logo{position:absolute;top:auto;right:0;bottom:0;left:auto;width:5em;height:5em;line-height:5em}#sidebar .sidebar-content nav,h1,h2,h3,h4,h5,h6{line-height:1.2}#sidebar .leaver footer.logo svg{width:100%;height:auto}#sidebar .leaver footer.logo svg .lambda{fill:#F2F2F2}#sidebar .leaver footer.logo svg .dot{fill:#F60A20}#sidebar .leaver footer.logo img.logo{display:block;margin:0 auto;width:100%;height:100%}#sidebar .sidebar-content{position:fixed;top:5em;right:0;bottom:0;left:0;z-index:75;background-color:#404040;-moz-transition:all .3s ease;-o-transition:all .3s ease;-webkit-transition:all .3s ease;transition:all .3s ease;-moz-transform:translate3d(-100%,-100%,0)translate3d(5em,0,0);-ms-transform:translate3d(-100%,-100%,0)translate3d(5em,0,0);-webkit-transform:translate3d(-100%,-100%,0)translate3d(5em,0,0);transform:translate3d(-100%,-100%,0)translate3d(5em,0,0)}#sidebar .sidebar-content section.menu{position:absolute;top:1.25em;right:3.5em;bottom:11em;left:3.5em}#sidebar .sidebar-content nav a,#sidebar .sidebar-content nav a:visited{margin-bottom:.5em;padding:.5em 1.5em;font-weight:700;display:block;color:#F2F2F2;text-decoration:none;border:1px solid transparent;background-color:#404040;opacity:0;-moz-transform:translate3d(0,-1em,0);-webkit-transform:translate3d(0,-1em,0);transform:translate3d(0,-1em,0);-moz-transition:opacity .3s ease,-moz-transform .3s ease,border-color .5s ease;-o-transition:opacity .3s ease,-o-transform .3s ease,border-color .5s ease;-webkit-transition:opacity .3s ease,-webkit-transform .3s ease,border-color .5s ease;transition:opacity .3s ease,transform .3s ease,border-color .5s ease}#sidebar .sidebar-content nav a h2,#sidebar .sidebar-content nav a:visited h2{line-height:1.4;font-size:1.25em;font-weight:300}#sidebar .sidebar-content nav a:nth-child(1){-moz-transition-delay:350ms,350ms,0s;-o-transition-delay:350ms,350ms,0s;-webkit-transition-delay:350ms,350ms,0s;transition-delay:350ms,350ms,0s}#sidebar .sidebar-content nav a:nth-child(2){-moz-transition-delay:400ms,400ms,0s;-o-transition-delay:400ms,400ms,0s;-webkit-transition-delay:400ms,400ms,0s;transition-delay:400ms,400ms,0s}#sidebar .sidebar-content nav a:nth-child(3){-moz-transition-delay:450ms,450ms,0s;-o-transition-delay:450ms,450ms,0s;-webkit-transition-delay:450ms,450ms,0s;transition-delay:450ms,450ms,0s}#sidebar .sidebar-content nav a:nth-child(4){-moz-transition-delay:500ms,500ms,0s;-o-transition-delay:500ms,500ms,0s;-webkit-transition-delay:500ms,500ms,0s;transition-delay:500ms,500ms,0s}#sidebar .sidebar-content nav a:nth-child(5){-moz-transition-delay:550ms,550ms,0s;-o-transition-delay:550ms,550ms,0s;-webkit-transition-delay:550ms,550ms,0s;transition-delay:550ms,550ms,0s}#sidebar .sidebar-content nav a:nth-child(6){-moz-transition-delay:600ms,600ms,0s;-o-transition-delay:600ms,600ms,0s;-webkit-transition-delay:600ms,600ms,0s;transition-delay:600ms,600ms,0s}#sidebar .sidebar-content nav a:hover{border:1px solid #8C8979;z-index:2}#sidebar footer.details{position:absolute;top:auto;right:0;bottom:0;left:0;margin:0 5rem;height:10.5rem;font-size:.75rem;font-weight:300;line-height:1.4;border-top:1px solid #8C8979;opacity:0;-moz-transform:translate3d(0,-1em,0);-webkit-transform:translate3d(0,-1em,0);transform:translate3d(0,-1em,0);-moz-transition:all .3s ease .65s;-o-transition:all .3s ease .65s;-webkit-transition:all .3s ease;-webkit-transition-delay:.65s;transition:all .3s ease .65s}#sidebar.open .leaver .trigger div,#sidebar.open .sidebar-content,#sidebar.open .sidebar-content footer.details{-webkit-transform:translate3d(0,0,0)}#sidebar.open .leaver .trigger div,#sidebar.open .sidebar-content,#sidebar.open .sidebar-content footer.details,#sidebar.open nav a,#sidebar.open nav a:visited{-moz-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}#sidebar footer.details a,#sidebar footer.details a:visited{color:#F2F2F2;text-decoration:underline;font-weight:400}#sidebar footer.details div.vcard .n,blockquote{font-weight:500}#sidebar footer.details a img,#sidebar footer.details a:visited img{display:block;margin:1em 0 0 auto}ol li,ul li{margin-left:2em}#sidebar footer.details div.vcard{width:10rem;margin-top:.5em}#sidebar footer.details div.vcard>div{margin-bottom:.5em}#sidebar footer.details div.licence{position:absolute;top:.5em;right:0;bottom:auto;left:auto;width:12em;text-align:right}#sidebar footer.details div.licence h1{font-size:1em;font-weight:500;margin-bottom:.5em}#sidebar.open nav a,#sidebar.open nav a:visited{opacity:1;-webkit-transform:translate3d(0,0,0)}#sidebar.open .sidebar-content footer.details{font-size:1em;opacity:1}@media (min-width:48rem){#sidebar{font-size:1rem}}@media (min-width:64rem){#sidebar{font-size:1rem}#sidebar .leaver{position:fixed;top:0;right:auto;bottom:0;left:0;width:5em;height:100%}#sidebar .leaver .trigger div{-moz-transform:translate3d(-100%,0,0);-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}#sidebar .leaver .trigger .menu{top:0;left:5em}#sidebar .leaver footer.logo{position:absolute;top:auto;right:auto;bottom:0;left:auto}#sidebar .sidebar-content{top:0;left:5em;-moz-transform:translate3d(-100%,-100%,0)translate3d(0,5em,0);-ms-transform:translate3d(-100%,-100%,0)translate3d(0,5em,0);-webkit-transform:translate3d(-100%,-100%,0)translate3d(0,5em,0);transform:translate3d(-100%,-100%,0)translate3d(0,5em,0)}}@media (min-width:48rem)and (min-height:40rem){#sidebar footer.details{display:block;font-size:1rem}}@media (max-height:30rem){#sidebar nav a,#sidebar nav a:visited{margin-bottom:.1875rem;padding:0 1.125rem}#sidebar nav a h1,#sidebar nav a:visited h1{font-size:3em;line-height:1.2}#sidebar nav a h2,#sidebar nav a:visited h2{display:none}}ol,ul{list-style:none;margin-bottom:1.6em}ul li{list-style:disc}ol li{list-style:decimal}ul.unstyled,ul.unstyled li{list-style:none}ul.inline,ul.inline li{display:inline;list-style:none}ul.unstyled li{margin-left:0}blockquote{margin-bottom:1em;border-top:1px solid #272626;border-left:1em solid #272626;border-right:1px solid #272626;padding:.5rem}blockquote small{display:block;font-size:.8em;text-align:right;font-weight:300}h1,h2,h3,h4,h5,h6{font-weight:900}a,a:visited{font-weight:500;color:#F60A20}p{padding-bottom:1em}h1{font-size:3.5em}h1 a,h1 a:visited,h2 a,h2 a:visited,h3 a,h3 a:visited,h4 a,h4 a:visited,h5 a,h5 a:visited,h6 a,h6 a:visited{color:inherit;text-decoration:none;font-weight:900}h2{font-size:2.53287em}h3{font-size:1.96713em}h4{font-size:1.56574em}h5{font-size:1.25439em}h6{font-size:1em}.tt,strong{font-weight:700}em{font-style:italic}.tt{font-family:"Fira Mono"}.problemstatement{margin:.75rem;padding:.375rem;border:1px solid #272626}@media (min-width:48rem){h1{font-size:3.5em}h2{font-size:2.53287em}h3{font-size:1.96713em}h4{font-size:1.56574em}h5{font-size:1.25439em}h6{font-size:1em}}body,html{height:100%}html{font-family:"Fira Sans",Lato,sans-serif;font-weight:400;line-height:1.6;font-size:16px}body{color:#272626;background-color:#F2F2F2}.main-content h1 a,.main-content h1 a:visited,.main-content h2 a,.main-content h2 a:visited,.main-content h3 a,.main-content h3 a:visited,.main-content h4 a,.main-content h4 a:visited,.main-content h5 a,.main-content h5 a:visited,.main-content h6 a,.main-content h6 a:visited{color:inherit}#indieauth{display:none}.leaflet-container{width:100%;height:30em}.animate{-moz-transition:all 1s ease;-o-transition:all 1s ease;-webkit-transition:all 1s ease;transition:all 1s ease}.animate.ng-enter,.animate.ng-leave.ng-leave-active{position:absolute;top:0;left:0;right:0;opacity:0}.animate.ng-enter.ng-enter-active{opacity:1}.main-content{font-size:.875rem;font-weight:400;height:100%;max-width:40rem;margin:3.75rem auto 0;z-index:50}.main-content h1,.main-content h2,.main-content h3,.main-content h4,.main-content h5,.main-content h6{margin-bottom:.75rem}.main-content>section{padding:2em}.main-content section>:last-child{padding-bottom:0;margin-bottom:0}.main-content section{will-change:transform,opacity;padding-bottom:2em}.main-content section p{padding-bottom:1em}.main-content section p:last-child{padding-bottom:0}.main-content img{display:block;max-width:90%;height:auto;margin:0 auto 1.6em}.main-content a,.main-content a:visited{color:#F60A20}.main-content table.meta{margin-bottom:1.6em}.main-content table.meta td.heading{font-weight:500;padding-right:.5em}.main-content table.meta td{vertical-align:top}@media (min-width:48rem){.main-content{margin:5em auto 0;font-size:1rem;width:40em}.main-content h1,.main-content h2,.main-content h3,.main-content h4,.main-content h5,.main-content h6{margin-bottom:1rem;border-bottom:1px solid #272626}}@media (min-width:64rem){.main-content{margin:0 0 0 5em}.main-content>section{padding:1em 2em}}#post-archive section.year,#tags section.year,#talk-archive section.year{border-top:thin solid #272626;padding-top:.5em}#post-archive section.year:first-child,#tags section.year:first-child,#talk-archive section.year:first-child{border-top:none;padding-top:0}#post-archive section.year h2.year,#tags section.year h2.year,#talk-archive section.year h2.year{float:left;width:6rem;border-bottom:none;overflow:hidden}@media (min-width:48rem){#post-archive section.year h2.year,#tags section.year h2.year,#talk-archive section.year h2.year{width:8rem}}#post-archive section.year section.month,#tags section.year section.month,#talk-archive section.year section.month{margin-left:8em}#post-archive span.day,#tags span.day,#talk-archive span.day{display:block;width:4em;float:left;font-weight:900}#post-archive span.title,#tags span.title,#talk-archive span.title{display:block;margin-left:4em}#post-archive span.date,#tags span.date,#talk-archive span.date{float:left;display:block;width:7em;font-weight:900}.archive{padding:1em 2em;font-size:2em;text-align:center}.elastic-container{position:relative;padding-bottom:56.25%!important;padding-top:30px!important;height:0;overflow:hidden;margin:auto 2em}.elastic-container embed,.elastic-container iframe,.elastic-container object{position:absolute;top:0;left:0;width:100%;height:100%}@media (min-width:64rem){.half{float:left;width:50%}.activities::after,.vcard::after{content:"\0020";display:block;height:0;clear:both;overflow:hidden;visibility:hidden}}
+</style>
+</head>
+
+<body>
+<div id="indieauth">
+    <ul>
+        <li><a rel="me" href="mailto:yinyhmail@gmail.com">yinyhmail@gmail.com</a></li>
+        <li><a rel="me" href="https://github.com/AaronYee">Aaron</a> on Github</li>
+        <li><a rel="me" href="http://weibo.com/u/3210788245">@xinitrc</a> on Sina</li>
+        <li><a rel="me" href="https://plus.google.com/+yinyhmai@gmail.com/">Aaron</a> on Google+</li>
+    </ul>
+</div>
+<div id="sidebar">
+    <div class="leaver">
+        <div class="trigger">
+            <a href="" id="menu-closer" title="Close Menu">
+                <div class="menu-close">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KCgo8IS0tIFRoZSBpY29uIGN
+hbiBiZSB1c2VkIGZyZWVseSBpbiBib3RoIHBlcnNvbmFsIGFuZCBjb21tZXJjaWFsIHByb2plY3
+RzIHdpdGggbm8gYXR0cmlidXRpb24gcmVxdWlyZWQsIGJ1dCBhbHdheXMgYXBwcmVjaWF0ZWQuI
+ApZb3UgbWF5IE5PVCBzdWItbGljZW5zZSwgcmVzZWxsLCByZW50LCByZWRpc3RyaWJ1dGUgb3Ig
+b3RoZXJ3aXNlIHRyYW5zZmVyIHRoZSBpY29uIHdpdGhvdXQgZXhwcmVzcyB3cml0dGVuIHBlcm1
+pc3Npb24gZnJvbSBpY29ubW9uc3RyLmNvbSAtLT4KCgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS
+8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvM
+S4xL0RURC9zdmcxMS5kdGQiPgoKPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3
+LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGx
+pbmsiIHg9IjBweCIgeT0iMHB4IgoKCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZX
+dCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4b
+Ww6c3BhY2U9InByZXNlcnZlIj4KCjxwb2x5Z29uIGlkPSJ4LW1hcmstaWNvbiIgZmlsbD0iI0Yy
+RjJGMiIgcG9pbnRzPSI0MzguMzkzLDM3NC41OTUgMzE5Ljc1NywyNTUuOTc3IDQzOC4zNzgsMTM
+3LjM0OCAzNzQuNTk1LDczLjYwNyAyNTUuOTk1LDE5Mi4yMjUgMTM3LjM3NSw3My42MjIKCgk3My
+42MDcsMTM3LjM1MiAxOTIuMjQ2LDI1NS45ODMgNzMuNjIyLDM3NC42MjUgMTM3LjM1Miw0MzguM
+zkzIDI1Ni4wMDIsMzE5LjczNCAzNzQuNjUyLDQzOC4zNzggIi8+Cgo8L3N2Zz4=" alt="Menu Close"/>
+                </div>
+            </a>
+            <a href="" id="menu-opener" title="Menu">
+                <div class="menu">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KCjwhLS0gTGljZW5zZSBBZ3J
+lZW1lbnQgYXQgaHR0cDovL2ljb25tb25zdHIuY29tL2xpY2Vuc2UvIC0tPgoKPCFET0NUWVBFIH
+N2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR
+3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5z
+PSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzM
+ub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI1MTJweCIgaGVpZ2h0PS
+I1MTJweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwI
+DUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjZjJmMmYyIiBpZD0i
+bWVudS1pY29uIiBkPSJNNDYyLDE2My41SDUwdi02NWg0MTJWMTYzLjV6IE00NjIsMjIzLjVINTB
+2NjVoNDEyVjIyMy41eiBNNDYyLDM0OC41SDUwdjY1aDQxMlYzNDguNXoiLz4KPC9zdmc+" alt="Menu"/>
+                </div>
+            </a>
+        </div>
+        <footer class="logo">
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewbox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                <path d="M15.9754,20.8345L8.76062,28.0492L3.95078,23.2394L11.1655,16.0246L3.95078,8.80984L8.76062,4L28,23.2394L23.1902,28.0492L15.9754,20.8345Z" class="lambda"/>
+                <path d="M18.9816,8.50922L23.4908,4L28,8.50922L23.4908,13.0184L18.9816,8.50922Z" class="dot"/>
+</svg>
+        </footer>
+    </div>
+    <div class="sidebar-content">
+        <section class="menu">
+            <nav>
+                <a href="/">
+                    <h1>Blog</h1>
+                    <h2>Recordings of knowledge</h2>
+                </a>
+                <a href="/talks.html">
+                    <h1>Talks</h1>
+                    <h2>Recordings of life</h2>
+                </a>
+                <a href="/about.html">
+                    <h1>About me</h1>
+                    <h2>Details about me</h2>
+                </a>
+                <a href="/contact.html">
+                    <h1>Contact</h1>
+                    <h2>Contact and legal information</h2>
+                </a>
+            </nav>
+        </section>
+        <footer class="details">
+
+            <div class="vcard">
+                <div class="n"><span class="given-name">Aaron</span> <span class="family-name">Yee</span></div>
+
+                <div class="adr">
+                    <div class="street-address">No.132, East Outer Ring Road, Guangzhou Higher Education Mega Center, Guangzhou.</div>
+                    <div class="country-name">China</div>
+                </div>
+            </div>
+            <div class="licence">
+                <h1>Licence</h1>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                    <img alt="Creative Commons License" src="data:image/png;base64,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
+DwRbusfJXB0QAAAABJRU5ErkJggg==" class="cc-button">
+                </a>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<div>
+        <div class="main-content show">
+        <div id="blogbg" class="background">
+            <h1 class="section-head">blog</h1>
+            <div id="credit">
+                <a href="https://www.flickr.com/photos/thomasleuthard">Background image by Thomas Leuthard</a>
+            </div>
+        </div>
+        <article class="full-article">
+            <header>
+                <span class="date"><time pubdate>2015-06-13</time></span>
+	</header>
+	<div class="article-body">
+	  <h1>关于 Hexo ，也就是那些事儿</h1>
+	  <p>What is Hexo ? Why Hexo ? How to use Hexo ?</p>
+<!--more-->
+<figure>
+<img src="/assets/images/abouthexo/hexo.png" alt="" />
+</figure>
+<section id="前言" class="level2">
+<h2>### 前言</h2>
+<p>这篇博文主要介绍用hexo写blog中所涉及到的一些内容，内容参考自<a href="http://hexo.io/zh-cn/docs/">hexo官方文档</a>和<a href="http://ijiaober.github.io/categories/hexo/">ijiaober的Hexo使用攻略系列</a>。</p>
+</section>
+<section id="hexo简介" class="level2">
+<h2>### Hexo简介</h2>
+<ul>
+<li><p><strong>Q. 什么是Hexo？</strong> &gt; 快速、简洁且高效的博客框架，made by <a href="http://tommy-chen.com/">Tommy Chen</a>。(Tommy Chen的个人主页太炫酷了。)</p></li>
+<li><strong>Q. Hexo的优势？</strong> &gt; * 超快速度，Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</li>
+<li>支持Markdown，Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。</li>
+<li>一键部署，只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。</li>
+<li>丰富的插件，Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。</li>
+<li><p>简单的操作，几条命令即可完成blog框架的搭建。 $ npm install hexo-cli -g $ hexo init blog $ cd blog $ npm install $ hexo server</p></li>
+</ul>
+</section>
+<section id="hexo安装" class="level2">
+<h2>### Hexo安装</h2>
+<p>安装Hexo很简单，需要在安装前确认已经安装下列应用程序： * <a href="https://nodejs.org/">Node.js</a> * <a href="http://git-scm.com/">Git</a> 接下来只需要在Git bash中使用npm即可完成Hexo的安装。 $ npm install -g hexo-cli 若Git bash中提示 <strong>npm command not found</strong>，请检查 <strong>Node.js</strong> 的配置信息，是否将 <strong>Node.js</strong> 的路径加入到环境变量中（建议安装 <strong>Node.js</strong> 时不要修改默认安装路径）。若确认无误仍出现上述错误，请打开 <strong>windows command</strong> 命令行，进入 <strong>node.js</strong> 安装路径下尝试安装。<br />
+ C:Files_modules&gt; npm install -g hexo-cli 测试，若输入命令后出现类似下述内容后，则证明安装成功。 $ hexo version hexo: 3.1.1 os: Windows_NT http_parser: 2.3 node: 0.12.4 v8: 3.28.71.19</p>
+</section>
+<section id="hexo初探" class="level2">
+<h2>### Hexo初探</h2>
+<p>Hexo安装成功后，我们首先来试用一下。首先创建一个我们想要保存blog信息的文件夹，anyway，anywhere。然后，打开 git bash，执行以下命令。</p>
+<pre><code>$ hexo init &lt;folder&gt;
+$ cd &lt;folder&gt;
+$ npm install</code></pre>
+<p>其中的 <strong>&lt;folder&gt;</strong> 为我们刚刚所建立的文件夹名称，注意存放位置的问题，此处需使用<strong>文件夹的绝对路径</strong>。也可以先用 git bash 进入到目录文件夹，再执行初始化操作。观察我们刚刚所建立的文件夹，会发现其中多出了如下的文件。</p>
+<pre><code>.
+├── node_modules
+├── _config.yml        
+├── package.json       
+├── scaffolds          
+├── scripts            
+├── source             
+|   ├── _drafts
+|   └── _posts
+└── themes       </code></pre>
+<p>关于各个文件夹，我们稍后再详细介绍。接下来，我们使用 Hexo 预带的内容生成第一个静态页面。</p>
+<pre><code>$ hexo generate    // hexo g is also okay    </code></pre>
+<p>观察 blog 文件夹下，会发现多出了 public 文件夹，这便是我们所产生的静态网页文件所存放的位置。</p>
+<p>然后开启 local 本地端hexo服务器。</p>
+<pre><code>$ npm install hexo-server --save
+$ hexo server     // hexo s is also okay</code></pre>
+<p>打开浏览器，地址栏输入 <code>http://localhost:4000</code> 即可观察到hexo预带的网页展示。</p>
+<p>关于如何本地的网页部署到Github端，请参考<a href="http://aaronyee.github.io/2015/06/12/hello-world/">Github page 搭配 Hexo 搭建独立博客</a>。</p>
+</section>
+<section id="hexo管理与配置" class="level2">
+<h2>### Hexo管理与配置</h2>
+<p>谈到 Hexo 的管理，我们首先来看一下 blog 根目录下每个文件夹的作用。</p>
+<ul>
+<li><p><code>node_modules</code>，这个文件夹中存放的主要是 hexo 的相关插件，我们通过命令 <code>npm install</code> 所安装的插件包便存放在这个文件夹中，除了默认安装的插件外，如缺少插件可采用如下命令的格式来安装。</p>
+<pre><code>$ npm install hexo-generator-index --save
+$ npm install hexo-generator-archive --save
+$ npm install hexo-generator-category --save
+$ npm install hexo-generator-tag --save
+$ npm install hexo-server --save
+$ npm install hexo-deployer-git --save
+$ npm install hexo-deployer-heroku --save
+$ npm install hexo-deployer-rsync --save
+$ npm install hexo-deployer-openshift --save
+$ npm install hexo-renderer-marked@0.2 --save
+$ npm install hexo-renderer-stylus@0.2 --save
+$ npm install hexo-generator-feed@1 --save
+$ npm install hexo-generator-sitemap@1 --save</code></pre></li>
+<li><p><code>public</code>，这个文件夹中存放的是我们使用hexo框架+Markdown语法写出的blog经过动态编译后形成的静态网页文件，包括 css 与 js 的内容。若想将本地的 blog 部署到服务器端（如 Github page ），只需将<code>public</code>文件夹中的内容上传到服务器端即可。</p></li>
+<li><p><code>scaffolds</code>，这个文件夹中存放的是创建新的 blog 时的模板信息，所以如果有固定的写作样式等等，可以通过配置这个文件夹中的相应文件达到目的。</p>
+<pre><code>title: { title }</code></pre>
+<p>date: { date } categories: tags: — 如我的<code>scaffolds/post.md</code>中的内容如下所示，那么每次我<code>hexo new {title}</code>写新的 blog 的时候，上述内容便会自动出现在新的 blog 的开头。</p></li>
+<li><p><code>source</code>，这个文件夹中是我们本地的资源文件夹，例如我们通过<code>hexo new {title}</code>生成的 blog 便会存在于 <code>source/_posts</code>文件夹中。</p></li>
+<li><p><code>themes</code>，这个文件夹中存放的是我们搭配 blog 框架时候所使用的主题信息，<code>hexo 3.1.1</code>的默认主题是 <code>landscape</code>。</p></li>
+<li><p><code>_config.yml</code>，这个文件是我们整个 blog 框架的配置信息。下面贴出个人的配置文件并附上注释信息，大家可根据自己的需要进行修改。 # Hexo Configuration ## Docs: http://hexo.io/docs/configuration.html ## Source: https://github.com/hexojs/hexo/</p>
+<pre><code># Site
+title: Aaron-Yee Blog                       # // 网站标题
+subtitle: 专注 &amp; 沉淀                       # // 网站副标题
+description:                                # // 网站描述
+author: Aaron Yee                           # // 作者名字
+language: zh-CN                             # // 网站使用的语言
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as &#39;http://yoursite.com/child&#39; and root as &#39;/child/&#39;
+url: http://yoursite.com
+root: /
+about_dir: about
+tag_dir: tags
+category_dir: categories
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory                                 // 目录
+source_dir: source                          # // 资源文件夹，用来存放内容
+public_dir: public                          # // 公共文件夹，用于存放生成的站点文件
+tag_dir: tags                               # // 标签文件夹
+archive_dir: archives                       # // 归档文件夹
+category_dir: categories                    # // 分类文件夹
+code_dir: downloads/code                    # // include code 文件夹
+i18n_dir: :lang                             # // 国际化(i18n)文件夹
+skip_render:                                # // 跳过指定文件的渲染
+
+# Writing                                   // 设置hexo new 时候的相关配置
+new_post_name: :title.md                    # // 新文章文件名称 # File name of new posts                
+default_layout: post                        # // 预设布局
+titlecase: false                            # // 把标题转换为title case # Transform title into titlecase
+external_link: true                         # // 在新标签中打开链接 # Open external links in new tab
+filename_case: 0                            # // 把文件名称转换为(1)小写或(2)大写
+render_drafts: false                        # // 显示草稿
+post_asset_folder: false                    # // 启动Asset文件夹
+relative_link: false                        # // 把链接改为与根目录的相对位置
+future: true                                # // 显示未来的文章
+highlight:                                  # // 代码块设置
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+
+# Category &amp; Tag                            // 分类 &amp; 标签
+default_category: uncategorized
+category_map:
+        机器学习: Machine Learning
+        深度学习: Deep Learning
+        技术杂谈: tittle-tattle
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+## Themes: http://hexo.io/themes/
+theme: jacman                              # // 主题名称
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/AaronYee/AaronYee.github.io.git
+  branch: master</code></pre></li>
+</ul>
+<p>关于上述配置信息如果还有不明白的地方，请参考<a href="http://hexo.io/zh-cn/docs/configuration.html">Hexo 的官方文档</a>。</p>
+</section>
+<section id="hexo命令" class="level2">
+<h2>### Hexo命令</h2>
+<p>Hexo 的命令都是在类似于 Git bash 这样的终端中来输入的。</p>
+<ul>
+<li><pre><code>新建一个网站框架（即整个 blog）。如果没有设置 folder ，Hexo 默认是在当前的工作目录下建立网站框架。		
+	$ hexo init [folder]</code></pre></li>
+<li><pre><code>新建一篇 blog 。如果没有设置 layout 的话，默认使用 **_config.yml** 中的 **default_layout** 参数代替。如果标题包含空格的话，请使用引号括起来。(`&lt; &gt;` 符号不必打出。)
+
+	$ hexo new [layout] &lt; title &gt;</code></pre></li>
+<li><pre><code>生成静态文件。
+
+	$ hexo generate 
+	$ hexo generate --deploy       // 表示文件生成后立即部署到服务器端.
+	$ hexo generate --watch        // 监视文件变动并立即重新生成静态文件，在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。</code></pre></li>
+<li><p>发表草稿。</p>
+<pre><code>	$ hexo publish [layout] &lt; filename &gt;</code></pre></li>
+<li><pre><code>启动本地端服务器。
+	$ hexo server
+	$ hexo server -p 5000          // 将端口更改为5000
+	$ hexo server -s               // 静态模式服务器只处理 public 文件夹内的文件，而不会处理文件变动，执行时应该先自行执行 hexo generate。
+	$ hexo server -i 192.168.1.1   // 服务器默认运行在 `0.0.0.0`，可以覆盖默认的 IP 设置。</code></pre></li>
+<li><p>部署网站，只需一条命令就能将网站部署到服务器上。 $ hexo deploy 但在开始之前，需要安装<code>hexo-deployer-git</code>插件。 $ npm install hexo-deployer-git –save 修改<code>_config.yml</code>的参数设置。以部署到 Github page 为例，用文本编辑器打开<code>_config.yml</code>，找到 deploy 选项，修改参数。 # Deployment ## Docs: http://hexo.io/docs/deployment.html deploy: type: git repo: &lt; repository url &gt; // repository url 替换为个人的Github page地址 branch: master // 分支名称。如果您使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测。</p>
+部署到其他地方的话，请参考<a href="http://hexo.io/zh-cn/docs/deployment.html">官方文档</a>。</li>
+<li><pre><code>从其他系统迁移到Hexo。具体内容请参考[hexo迁移](http://hexo.io/zh-cn/docs/migration.html)。
+	$ hexo migrate &lt; type &gt;</code></pre></li>
+</ul>
+<p>更多命令请参考<a href="http://hexo.io/zh-cn/docs/commands.html">hexo官方文档——命令</a>。</p>
+<p>那么，我们使用 Hexo 写博文的整个流程大概是这样的。</p>
+<pre><code>		$ mkdir &quot;blog folder&quot;
+		$ cd &quot;blog folder&quot;
+		$ hexo init
+		$ npm install
+		$ hexo new &quot;blog title&quot;
+		$ echo &quot; &quot; &gt; &quot;blog title&quot;      // 双引号中的内容表示 blog的内容，此处推荐使用文本编辑器编辑 hexo new 命令生成的 &quot;blog title&quot;.md 文件。
+		$ hexo generate
+		$ hexo server                  // 在本地服务器端调试，待确认无误后，上传到Github page服务器。
+		$ hexo deploy</code></pre>
+</section>
+<section id="玩转hexo" class="level2">
+<h2>### 玩转Hexo</h2>
+<p>此处我假设我们都已经按照上文搭建好了我们的框架，但是打开主页我们会发现很多地方我们不满意，那么应该怎么修改呢？实际上，<strong>每个主题有各自不同的修改方法</strong>，此处以 Hexo 自带的 landscape 主题为例。没错，这些东东都是由这个叫做<strong>主题</strong>的东东引起的。</p>
+<p>那么应该怎么修改特定主题的内容呢？答案就在<code>./themes/landscape/_config.yml</code>这个文件中。</p>
+<ul>
+<li><p><strong>导航栏</strong>。打开主页我们会发现 landscape 这个主题只有<code>Home</code>和<code>Archives</code>两项，那么怎么添加呢？文本编辑器打开<code>./themes/landscape/_config.yml</code>文件，在最上方我们可以看到。</p>
+<pre><code># Header
+menu:
+  Home: /
+  Archives: /archives
+rss: /atom.xml</code></pre>
+<p>Okay，我们只需要把想加入导航栏的内容按照上面的格式添加进去即可，例如，我们想添加 About 项。 # Header menu: Home: / Archives: /archives About: /about rss: /atom.xml 注意，<strong>配置文件中的<code>;</code>后必须有一个空格！</strong><code>;</code>后的内容表示访问路径，接下来我们只需要在 <code>blog/source</code>目录下增加一个<code>about</code>文件夹，并在其中添加一个<code>index.md</code>文件，当我们在主页点击 About 后，页面便会跳转到我们刚刚所编辑的这个<code>index.md</code>所生成的静态网页中，<code>index.md</code>的内容可按照个人需求来写。</p></li>
+<li><p><strong>评论和分享</strong>。怎么添加 blog 的评论和分享功能呢？blog 中的评论系统国内一般采用“多说”，国外用“Disqus”较多，可根据自己的需求进行配置，以多说为例。<strong>实际上，每个不同的主题有不同的配置方法！</strong>这里，我们只是以 Hexo 预带的 landscape 主题为例。</p></li>
+</ul>
+<p>访问<a href="http://duoshuo.com/">多说</a>，使用其中一种途径登陆后会有设置<strong>域名</strong>，<strong>名称</strong>和<strong>首页网址</strong>，首页网址填写为我们的<strong>Github page 地址</strong>，如(username.github.io)。 <strong>名称为我们 Github 的 username </strong>。 然后，使用文本编辑器打开<code>/themes/landscape/layout/_partial/article.ejs</code>文件，把</p>
+<pre><code>	&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;
+	  &lt;section id=&quot;comments&quot;&gt;
+	    &lt;div id=&quot;disqus_thread&quot;&gt;
+	      &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;//disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+	    &lt;/div&gt;
+	  &lt;/section&gt;
+	&lt;% } %&gt;</code></pre>
+<p>改为</p>
+<pre><code>	&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.duoshuo_shortname){ %&gt;
+    &lt;section id=&quot;comments&quot;&gt;
+    	&lt;!-- 多说评论框 start --&gt;
+    	&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;
+    	&lt;!-- 多说评论框 end --&gt;
+    	&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    var duoshuoQuery = {short_name:&#39;&lt;%= config.duoshuo_shortname %&gt;&#39;};
+      (function() {
+        var ds = document.createElement(&#39;script&#39;);
+        ds.type = &#39;text/javascript&#39;;ds.async = true;
+        ds.src = (document.location.protocol == &#39;https:&#39; ? &#39;https:&#39; : &#39;http:&#39;) + &#39;//static.duoshuo.com/embed.js&#39;;
+        ds.charset = &#39;UTF-8&#39;;
+        (document.getElementsByTagName(&#39;head&#39;)[0] 
+         || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(ds);
+      })();
+      &lt;/script&gt;
+    &lt;!-- 多说公共JS代码 end --&gt;
+  &lt;/section&gt;
+  &lt;% } %&gt;</code></pre>
+<p>然后打开根目录的配置文件<code>./_config.yml</code>，在其中加入以下代码。</p>
+<p>duoshuo_shortname: username // 这里的username请用 Github 的 username 替换。</p>
+<p>分享，<strong>landscape</strong> 主题已经自带了分享功能，但分享的对象都是 <strong>Facebook，Twitter</strong> 等国内不常见的网站，那么应该怎样添加或修改呢？</p>
+<p>首先，打开<code>./themes/landscape/source/js/script.js</code>文件，在其中找到如下代码：</p>
+<pre><code>	  var html = [
+	    &#39;&lt;div id=&quot;&#39; + id + &#39;&quot; class=&quot;article-share-box&quot;&gt;&#39;,
+	        &#39;&lt;input class=&quot;article-share-input&quot; value=&quot;&#39; + url + &#39;&quot;&gt;&#39;,
+	        &#39;&lt;div class=&quot;article-share-links&quot;&gt;&#39;,
+	           &#39;&lt;a href=&quot;https://twitter.com/intent/tweet?url=&#39; + encodedUrl + &#39;&quot; class=&quot;article-share-twitter&quot; target=&quot;_blank&quot; title=&quot;Twitter&quot;&gt;&lt;/a&gt;&#39;,
+	           &#39;&lt;a href=&quot;https://www.facebook.com/sharer.php?u=&#39; + encodedUrl + &#39;&quot; class=&quot;article-share-facebook&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;&lt;/a&gt;&#39;,
+	           &#39;&lt;a href=&quot;http://pinterest.com/pin/create/button/?url=&#39; + encodedUrl + &#39;&quot; class=&quot;article-share-pinterest&quot; target=&quot;_blank&quot; title=&quot;Pinterest&quot;&gt;&lt;/a&gt;&#39;,
+	           &#39;&lt;a href=&quot;https://plus.google.com/share?url=&#39; + encodedUrl + &#39;&quot; class=&quot;article-share-google&quot; target=&quot;_blank&quot; title=&quot;Google+&quot;&gt;&lt;/a&gt;&#39;,
+	        &#39;&lt;/div&gt;&#39;,
+	    &#39;&lt;/div&gt;&#39;
+	  ].join(&#39;&#39;);</code></pre>
+<p>可以看到其中形如<code>&lt;a href=&quot;https://twitter.com/intent/tweet?url=' + encodedUrl + '&quot; class=&quot;article-share-twitter&quot; target=&quot;_blank&quot; title=&quot;Twitter&quot;&gt;&lt;/a&gt;</code>的即为分享地址，那么我们可以加入国内常用的一些社交工具，如下所示 ’&lt;a href=“http://service.weibo.com/share/share.php?&amp;title=‘+ encodedUrl +’” class=“article-share-sina” target=“_blank&quot; title=“微博”&gt;</a>‘,’<a href="http://share.renren.com/share/buttonshare.do?link=' + encodedUrl + '" class="article-share-renren" target="_blank" title="人人"></a>‘,’<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-qq" target="_blank" title="QQ 空间"></a>‘,’<a href="http://v.t.qq.com/share/share.php?url=' + encodedUrl + '" class="article-share-tencent" target="_blank" title="腾讯微博"></a>’,</p>
+<p>加入代码之后，我们需要加入网站的图标。本主题使用 Font Awesome 来显示图标，但内置的 Font Awesome 版本较旧，无法显示 QQ、腾讯微博等图标，所以，需要下载<a href="http://fortawesome.github.io/Font-Awesome/">最新版 Font Awesome</a>，替换掉<code>source/fonts</code>中相关文件，并在<code>./theme/landscape/source/css/_variables.styl</code>中的<code>font-icon-version</code>修改为最新的 Font Awesome 版本号。</p>
+<p>然后，在<code>source/css/_partial/article.styl</code>中，找到以<code>.article-share-***</code>开头的代码，或添加或替换以下内容。</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">.article-share-sina</span>
+  <span class="kw">@extend</span> <span class="ot">$article</span>-share-link
+  <span class="kw">&amp;</span>:<span class="kw">before</span>
+    <span class="kw">content</span>: <span class="st">&quot;\f18a&quot;</span>
+  <span class="kw">&amp;</span>:<span class="kw">hover</span>
+    <span class="kw">background</span>: color-sina
+    <span class="kw">text-shadow</span>: 0 1px darken(color-sina, 20%)
+
+<span class="kw">.article-share-qq</span>
+  <span class="kw">@extend</span> <span class="ot">$article</span>-share-link
+  <span class="kw">&amp;</span>:<span class="kw">before</span>
+    <span class="kw">content</span>: <span class="st">&quot;\f1d6&quot;</span>
+  <span class="kw">&amp;</span>:<span class="kw">hover</span>
+    <span class="kw">background</span>: color-qq
+    <span class="kw">text-shadow</span>: 0 1px darken(color-qq, 20%)
+
+<span class="kw">.article-share-renren</span>
+  <span class="kw">@extend</span> <span class="ot">$article</span>-share-link
+  <span class="kw">&amp;</span>:<span class="kw">before</span>
+    <span class="kw">content</span>: <span class="st">&quot;\f18b&quot;</span>
+  <span class="kw">&amp;</span>:<span class="kw">hover</span>
+    <span class="kw">background</span>: color-renren
+    <span class="kw">text-shadow</span>: 0 1px darken(color-renren, 20%)
+
+<span class="kw">.article-share-tencent</span>
+  <span class="kw">@extend</span> <span class="ot">$article</span>-share-link
+  <span class="kw">&amp;</span>:<span class="kw">before</span>
+    <span class="kw">content</span>: <span class="st">&quot;\f1d5&quot;</span>
+  <span class="kw">&amp;</span>:<span class="kw">hover</span>
+    <span class="kw">background</span>: color-tencent
+    <span class="kw">text-shadow</span>: 0 1px darken(color-tencent, 20%)</code></pre></div>
+<p>最后，找到<code>source/css/_variables.styl</code>中<code>Colors</code>部分，最后四行分别为四个社交网站图标的背景色，可根据这些网站的主题色修改。可使用如下修改结果：</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">color-sina</span> = <span class="co">#ea0020</span>
+<span class="kw">color-qq</span> = <span class="co">#518adb</span>
+<span class="kw">color-renren</span> = <span class="co">#406ccb</span>
+<span class="kw">color-tencent</span> = <span class="co">#33b5eb</span></code></pre></div>
+<p>每个主题有很多不同的修改方法，关于 landscape 主题的更多修改可以查看<a href="http://blanboom.org/hack-hexo-theme-landscape.html#toc_4">Hexo 主题 Landscape 改造小记</a>。</p>
+<ul>
+<li>Hexo设置分类和标签</li>
+</ul>
+<p>大多数时候我们需要为我们所写的 blog 添加分类和标签，那么在 hexo 中应该怎么做呢？</p>
+<p>每当我们通过<code>hexo new title</code>新创建一篇博文之后，博文的初始内容会如下图所示：</p>
+<pre><code>	title: test go
+	date: 2015-06-12 16:14:38
+	tags:
+	---</code></pre>
+<p>可以编辑标题，日期和标签，并没有分类的选项，可以手动加入<code>categories</code>项。然后直接在相应的项后填入我们想要的内容即可。添加多个分类或标签的格式类似，如下所示：</p>
+<pre><code>	categories: [categories1,categories2,...]
+	tags: [tag1,tag2,...]</code></pre>
+<p>当然，为了不必每次创建新的 blog 后手动添加<code>categories</code>项，我们可以修改模板内容，打开<code>/scaffolds/post.md</code>文件，加入<code>categories</code>项即可。</p>
+<ul>
+<li>Hexo更换主题</li>
+</ul>
+<p>玩 blog 更换主题必然是很重要的一个方面，那么对于 Hexo来说，我们要怎么更换主题呢？本文以更换 Jacman 主题为例，更换其他主题类似。</p>
+<p>首先，找到你想要的主题的地址，绝大多数 Hexo 的主题都托管在 Github 上，那么我们找到所想要主题的 repo url。使用 Git bash 进入到我们本地 blog 的文件夹，然后将主题 clone 到<code>/themes</code>目录下。</p>
+<pre><code>	$ git clone https://github.com/wuchong/jacman.git themes/jacman</code></pre>
+<p>然后，修改根目录下的<code>_config.yml</code>文件，找到<code>theme</code>属性并将其置为<code>jacman</code>。</p>
+<pre><code>	# Extensions
+	## Plugins: http://hexo.io/plugins/
+	## Themes: http://hexo.io/themes/
+	theme: jacman                              # // 主题名称</code></pre>
+<p>然后，更新主题即可。</p>
+<pre><code>	cd themes/jacman
+	git pull origin master</code></pre>
+<p>jacman主题提供了丰富的属性配置，可根据个人需要修改配置文件。详情请参考<a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/">Jack’s Blog，如何使用Jacman主题</a>。</p>
+<p>更多关于hexo的主题，可参考<a href="https://github.com/hexojs/hexo/wiki/themes">Github Hexo Themes</a>，<a href="http://www.zhihu.com/question/24422335">知乎，有哪些好看的hexo主题</a>等等。</p>
+<section id="总结" class="level3">
+<h3>总结</h3>
+<p>这篇博文整合了几份优秀的关于 Hexo 的资源，相应的也已经在文中给出了链接，尽管并没有一些创新的地方，但还是希望能对同学们有一些帮助。</p>
+<div class="references">
+
+</div>
+</section>
+</section>
+	  </div>
+            <footer>
+                <div class="meta-info">
+                    <table class="meta">
+                        <tr>
+                            <td class="heading">
+                                Tags:
+                            </td>
+                            <td>
+                        <span>
+                            <a href="/tags/hexo.html">hexo</a>, <a href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88.html">技术杂谈</a>
+                        </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="heading">
+                                Licence:</td>
+                            <td><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+                                Attribution-ShareAlike 4.0 Unported License</a></td>
+                        </tr>
+                    </table>
+                    <div class="flattr">
+                        <a class="FlattrButton" href="https://xinitrc.de/blog/2015/06/13/abouthexo.html" title="关于 Hexo ，也就是那些事儿" lang="en"
+                           data-flattr-uid="xinitrc"
+                           data-flattr-tags="blog"
+                           data-flattr-category="text"></a>
+                    </div>
+                </div>
+                
+                    <div disqus="url"></div>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    var disqus_shortname = 'aaronyeegithubio'; // required: replace example with your forum shortname
+                    (function () {
+                        var dsq = document.createElement('script');
+                        dsq.type = 'text/javascript';
+                        dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by
+                    Disqus.</a></noscript>
+                <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                
+            </footer>
+        </article>
+    </div>
+
+</div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']]
+        }
+    });
+</script>
+<script>
+    function downloadJSAtOnload(){var n=document.createElement("script");n.src="/scripts/app.min.js",document.body.appendChild(n);if(document.querySelector("math")){var m=document.createElement("script");m.src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML",document.body.appendChild(m)}}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+</script>
+</body>
+</html>

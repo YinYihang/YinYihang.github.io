@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Posts tagged goagent</title>
+    <link href="https://xinitrc.de/tags/goagent.xml" rel="self" />
+    <link href="https://xinitrc.de" />
+    <id>https://xinitrc.de/tags/goagent.xml</id>
+    <author>
+        <name>Aaron Yee</name>
+        <email>yinyhmail@gmail.com</email>
+    </author>
+    <updated>2015-06-15T00:00:00Z</updated>
+    <entry>
+    <title>Chrome + GoAgent + GoGoTester 完美翻墙教程， 让我们越过那片海</title>
+    <link href="https://xinitrc.de/blog/2015/06/15/goagent.html" />
+    <id>https://xinitrc.de/blog/2015/06/15/goagent.html</id>
+    <published>2015-06-15T00:00:00Z</published>
+    <updated>2015-06-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>Chrome + Goagent + GoGoTester, cross the GFW and see the world.</p>
+<!--more-->
+<p>update: 近日 GoAgent 在 Github 上的 repo 已经被勒令删除，参考本文翻墙时请下载百度网盘中的 GoAgent。</p>
+<section id="前言" class="level2">
+<h2>### 前言</h2>
+<p>这篇博文主要讲述<strong>使用 Chrome + GoAgent + GoGoTester 完美翻墙</strong>，大多数的工作仍是搬砖，因为现在大多的翻墙教程已经讲的足够详细。<strong>但是，现在大部分教程都忽略了一个特别重要的事实！未翻墙的时候是无法注册 GAE (Google App Engine)的</strong>。因此，所有后续的步骤都难以进行下去。针对这个问题，我们提出如下的解决办法。 * 下载使用最新畅游版 Chrome ，畅游版 Chrome 已经默认配置好了 goagent ，可以直接使用。<strong>但是，问题来了。。现在很多畅游版 Chrome 由于并没有及时更新的原因，可能下载之后还是翻不过那片墙。</strong> * 此种方法针对<strong>高富帅</strong>。百度一下 VPN ，购买一定期限的 VPN 账号，挂载到<strong>大陆以外的 IP 地址</strong>，即可实现翻墙。挂载 VPN 的过程不同 VPN 代理商有不同的方法，按照他们的方法配置即可。 * 此种方法针对<strong>纯屌丝</strong>。之所以称之为纯屌丝，是因为正常人谁能干出这事来。。同样基于 VPN ，因为在购买 VPN 账号之前，通常会有 10 - 60 分钟不等的试用时间，咳咳，把握好这个时间！<strong>试用期间，你是可以越过墙的！！</strong>一个账号时间不够的话，就多注册几个试用账号。。其他的自己把握吧，我是真的没脸再讲下去了！ * 找一个身边可以翻墙出去的人来为你进行下面操作。</p>
+<p><strong>Google App Engine 已经改版，创建应用（create application）的过程已经完全不同于以前的教程，请参考下文。</strong></p>
+</section>
+<section id="goagent翻墙原理" class="level2">
+<h2>### GoAgent翻墙原理</h2>
+<p>实际操作前，先讲述一下 GoAgent 翻墙的原理。首先通过一张图片来看一下我们伟大的 GFW（Great Firewall of China）的赫赫战功。 <img src="/assets/images/goagent/ip.jpg" alt="" /></p>
+<p>这是全球访问量前30的网站，带有红线的表明被墙掉了，很明显，半壁江山已经沦陷，喔，据说最近全球最大的同性交友网站 <strong>Github</strong> 和 自由百科全书中文 <strong>Wikipedia</strong> 也相继进小黑屋了，这充分说明我国的技术水平还是可以的。</p>
+<p>言归正传，那么 <strong>GoAgent</strong> 是什么呢？<strong>GoAgent</strong> 是使用跨平台语言Python开发的代理软件，利用 <strong>Google App Engine</strong> 的服务器充当代理，帮助用户浏览被封锁的内容（<a href="https://zh.wikipedia.org/wiki/GoAgent">转自wikipedia</a>）。<strong>GoAgent</strong> 的运行原理与其他代理工具基本相同，使用特定的中转服务器完成数据传输。它使用 <strong>Google App Engine</strong> 的服务器作为中传，将数据包后发送至 Google 服务器，再由 Google 服务器转发至目的服务器，接收数据时方法也类似。</p>
+<p>这里又产生了一个<strong>代理服务器</strong>的概念。<strong>代理（Proxy）</strong>，也称网络代理，是一种特殊的网络服务，允许一个网络终端（一般为客户端）通过这个服务与另一个网络终端（一般为服务器）进行非直接的连接。提供代理服务的电脑系统或其它类型的网络终端称为<strong>代理服务器（Proxy Server）</strong>。如果你还没有理解，没有关系，可以用一个词生动形象的来描述代理——<strong>中介</strong>！</p>
+<p>当我们访问上述被墙掉的网站时，我们不再访问网站的特定服务器（<strong>因为已经被墙掉了</strong>），转而我们访问 Google 的<strong>代理服务器（中介）</strong>，由代理服务器去访问我们要访问的网站，因为代理服务器并没有被墙掉，可以访问指定网站，然后指定网站返回数据给代理服务器，代理服务器再将数据返回给我们，以此来达到翻墙的目的。</p>
+</section>
+<section id="配置goagent" class="level2">
+<h2>### 配置GoAgent</h2>
+<p>已经了解了原理，那么下面我们来具体的走一遍流程。下文部分参考自<a href="http://www.zhiyanblog.com/goagent-chrome-switchyomega-proxy-2015-latest.html">Goagent+Chrome+SwitchyOmega使用教程最新版(2015.1)</a>。</p>
+<p>这里我假设此时你不论通过上面所提出的三种途径中的哪种途径，短暂的获得了可以访问墙外网站的机会。</p>
+<ul>
+<li><p>首先，访问 <a href="https://appengine.google.com">Google App 中心</a> 申请注册 Google App Engine 账号。建议直接注册 Gmail 账户，一个账户畅享 Google 所有服务。如下所示，点击创建账户，然后填入相应信息完成创建。 <img src="/assets/images/goagent/createAccount.png" alt="" /><img src="/assets/images/goagent/perinfo.png" alt="" /></p></li>
+<li><p>账户创建完成后会自动登录。点击返回 <strong>Google Developers Console</strong>，进入创建应用界面，点击 <strong>Create Application</strong>。 <img src="/assets/images/goagent/return.png" alt="" /><img src="/assets/images/goagent/createapp.png" alt="" /></p></li>
+<li><p>刚刚发现，<strong>Google App Engine</strong> 改版了，注册 Application ID 的方法也不再像以前一样，按照上述步骤可进入到如下界面。 <img src="/assets/images/goagent/appid.png" alt="" /><img src="/assets/images/goagent/newproject.png" alt="" /></p></li>
+<li><p>点击建立专案，然后输入专案名称，点击建立即可。<strong>填入专案名称后生成的专案 ID 即为我们的 application id </strong>。注，由于我默认的地区是中国，所以字体是繁体（国内简体也被 Google 屏蔽了），不适应繁体也可以换为英语。此时返回 <a href="https://appengine.google.com/">Google app engine</a> 可以看到我们刚刚所创建的 Application 。 <img src="/assets/images/goagent/showapplication.png" alt="" /></p></li>
+<li><p>下载 GoAgent，GoAgent 发布在 Github 上，如果可以登录 Github 话，可以直接访问 <a href="https://github.com/goagent/goagent">Github GoAgent</a>。下载方法可以打开 git bash，进入工作目录，然后输入以下命令。</p>
+<pre><code>$ git clone https://github.com/goagent/goagent.git</code></pre>
+<p>也可以直接下载 ZIP 文件解压。<strong>若 Github 无法直接访问</strong>，请下载<a href="http://pan.baidu.com/s/1kTzjryJ">百度网盘 GoAgent</a>。</p></li>
+</ul>
+<blockquote>
+<p><strong>这里插一句吐槽百度网盘的话</strong>，昨天开始使用百度云网盘，先是 Chrome 浏览器上传文件持续失败，google 原因有的说因为上传速度过快导致，更换 Firefox 浏览器解决如上问题。刚刚上传 GoAgent 文件至网盘，分享链接持续失效，google 原因竟然是有些文件名涉及到关键字的问题，真心无奈。更换文件名 GA ，再次分享成功。用户体验太差了，失败也不给个原因。</p>
+</blockquote>
+<ul>
+<li><p>使用文本编辑器（notepad++ 或者 sublime）打开<code>goagent-3.0/local/proxy.ini</code>文件，找到如下代码，修改其中 <code>appid =</code>刚刚我们所申请的 <code>application id</code>。</p>
+<pre><code>[listen]
+ip = 127.0.0.1
+port = 8087
+username =
+password =
+visible = 0
+debuginfo = 0
+
+[gae]
+enable = 1
+appid = goagent</code></pre></li>
+<li><p>上传相应信息，请确保你现在的网络环境处于<strong>暂时可以越过墙</strong>的状态，否则无法连接到 google engine 服务器。Win7 系统下以管理员身份运行<code>goagent-3.0/server/upload.bat</code>文件，会出现以下内容。</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">APPID</span>:                             // 这个位置请输入我们刚刚所注册的专案 ID，即application id。可从[My application](https://appengine.google.com/)中查看。
+<span class="kw">Application</span>：aaronyeemail-976      // 这个位置会自动出现我们上一行所填入的 ID。
+<span class="kw">Host</span>: appengine.google.com         // 自动出现
+<span class="kw">Rolling</span> back the update
+<span class="kw">Email</span>:                             // 此处需要填入你的 google 账户，即 Gmail 账户
+<span class="kw">Password</span> for ... :                 // 此处填入 Gmail 账户的密码</code></pre></div></li>
+</ul>
+<p><strong>注意，新版本的 Application界面我并没有找到开启两步验证的地方，所以上面的密码我们填入的是 Gmail 账户的密码。</strong></p>
+<p><strong>输入密码后。会自动出现一系列内容，结尾处你会看到上传出现了错误，<code>attribute error: can't set attribute</code>，这是正常的现象，</strong>此时打开你的邮件，Gmail 账户或者我们注册 Gmail 时候填入的辅助邮箱**，会收到一封安全性的警告文件。 <img src="/assets/images/goagent/warn.png" alt="" /></p>
+<p>进入<strong>如果这是您本人所为</strong>下面的网址中，将<strong>不够安全的应用的访问权限更改为启用</strong>。 <img src="/assets/images/goagent/change.png" alt="" /></p>
+<ul>
+<li><p>重复上一步上传的步骤，Win7 系统下以管理员身份运行<code>goagent-3.0/server/upload.bat</code>文件，输入相应内容即可完成上传。可能需要尝试几次，我在第三次上传成功。 <img src="/assets/images/goagent/success.jpg" alt="" /></p></li>
+<li><p>Win7下以管理员身份运行<code>goagent-3.0/local/goagent.exe</code>，自动导入证书，<strong>GoAgent 配置完毕</strong>。（现存最新版的 goagent 文件夹中已经不含 <code>CA.crt</code>文件，已经集成到了自动安装证书）</p></li>
+</ul>
+</section>
+<section id="配置chrome" class="level2">
+<h2>### 配置Chrome</h2>
+<p>本文以 Chrome 浏览器为例，若想切换为其他的浏览器，可以参考<a href="https://github.com/goagent/goagent/blob/wiki/InstallGuide.md">goagent 官方 installGuide</a>。<strong>但 GoAgent 的配置与上文一致！</strong></p>
+<ul>
+<li><p>首先，下载 Chrome 下扩展插件 <a href="https://github.com/FelisCatus/SwitchyOmega/releases">SwitchyOmega.crx</a>，若无法打开，请前往<a href="http://pan.baidu.com/s/1pJsV96V">百度网盘 SwitchyOmege.crx</a>。</p></li>
+<li><p>打开 Chrome 浏览器，地址栏输入<code>Chrome://extensions/</code>后回车，打开扩展应用管理页，将刚才下载的<code>SwitchyOmega.crx</code>拖曳到当前页面下，点击确定即可完成安装。 <img src="/assets/images/goagent/add.png" alt="" /></p></li>
+<li><p>点击 Chrome 浏览器右上角出现的 SwitchyOmega 的图标，点击选项，在弹出页面的左侧栏中选择<strong>导入/导出，从备份文件恢复，打开<code>goagent-3.0/local/SwitchyOptions.bak</code></strong>，导入成功后， 在<strong>扩展设置页点击自动切换，并点击立即更新情景模式，然后点击 SwitchyOmega 的图标选择自动切换</strong>，完成 Chrome 配置。 <img src="/assets/images/goagent/input.png" alt="" /></p></li>
+</ul>
+<p>至此，我们已经完成了近乎全部的配置过程，想必你的 <strong>VPN 试用时间</strong>已经差不多到时了，那么任性的退掉 VPN，尝试下我们自己翻过去的墙吧！记得，每次想翻墙的时候，要先以管理员身份运行<code>goagent-3.0/local/goagent.exe</code>，然后打开 Chrome 浏览器即可畅通无阻。</p>
+</section>
+<section id="gogotester复活-goagent" class="level2">
+<h2>### GoGoTester，复活 GoAgent</h2>
+<p>翻墙了一段时间之后，我们可能会很悲剧的发现，google 又不能正常的使用了，<strong>打开 GoAgent 会发现大片的黄色 warning 和红色 error</strong>，那么此时，你的 GoAgent 已经瘫痪了，陷入了一种假死的状态。什么？？废了这么大力搭配好的环境难道就这么报废了吗？别急。<strong>GoGo Tester 来帮助你复活 GoAgent</strong>。 &gt; 首先说明一下 GoGo Tester 的原理，goagent 的工作方法，第一步是从自己的机器，通过运行于本机的 proxy 程序，连接到世界各地的某台外网 google 服务器。从 GoGo Tester 软件得知，有100万个这样的IP地址，对应多少服务器不太清楚，但目前来说，显然墙还没有把这些机器全部封掉。这样的话，GoGo tester 扫描到能工作的服务器后，配置到 goagent 中，就可以正常使用 goagent了。</p>
+<ul>
+<li><p>首先，<a href="https://code.google.com/p/gogo-tester/">下载 GoGo Tester</a>（打不开的话请选择<a href="http://pan.baidu.com/s/19Bgho">百度网盘 GoGoTester</a>，其中的两个文件为不同版本，either is okay，普遍反映老版本更好用一点，即<code>GoGo.exe</code>），若程序无法运行，请先安装<a href="http://www.microsoft.com/zh-cn/download/details.aspx?id=17718">.NET Frameworks 4.0</a>。</p></li>
+<li><p>打开GoGo Tester，点击随机测试，填入数量开始测试，会得到一系列 IP 地址。<strong>右键选择导出，全部 IP 到剪贴板</strong>即可复制下来可用的 IP 地址。 <img src="/assets/images/goagent/gogo.png" alt="" /></p></li>
+<li><p>使用文本编辑器打开<code>goagent-3.0/local/proxy.ini</code>文件，在其中找到如下代码。</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">[<span class="kw">iplist</span>]
+<span class="kw">google_cn</span> = www.google.cn<span class="kw">|www.g.cn</span>
+<span class="kw">google_hk</span> = www.google.com<span class="kw">|mail.google.com|www.google.com.hk|www.google.com.tw|www.l.google.com|www2.l.google.com|www3.l.google.com|www4.l.google.com|www5.l.google.com|mail.l.google.com|googleapis.l.google.com|googlecode.l.googleusercontent.com|maps.l.google.com|code.l.google.com|cert-test.sandbox.google.com</span>
+<span class="kw">google_talk</span> = talk.google.com<span class="kw">|talk.l.google.com|talkx.l.google.com</span></code></pre></div></li>
+</ul>
+<p>在<code>google_cn</code>和<code>google_hk</code>的等号后面分别加入我们刚刚测试得到的<strong>已经复制到剪贴版的 IP 地址</strong>（默认复制后剪贴板各个 IP 地址间已经包含<code>|</code>符号，只需在粘贴处添加一个<code>|</code>与原内容隔开即可）。</p>
+<ul>
+<li>保存设置，重新启动<code>goagent-3.0/local/goagent.exe</code>，okay，GoAgent 已经完美复活！</li>
+</ul>
+</section>
+<section id="后记" class="level2">
+<h2>### 后记</h2>
+<p>当你本机的 GoAgent 配置好后，只需将<code>goagent</code>的整个文件夹拷贝到其他电脑上（不需重新配置 GoAgent），并再配置一次 Chrome 浏览器，即可继续享受翻墙服务。所以这是一件<strong>牺牲你一个，幸福千万家</strong>的事（木有这么夸张，拷贝的话是共享同一个app ID，每个 application 每天限制 1G 流量）。</p>
+<p>虽然教程看起来比较复杂，但真正熟练之后操作起来也就是十几分钟的事。虽然同样可以花几十大洋换几月平安，但是，自己翻出去这种<strong>成就感</strong>是无法比拟的。</p>
+<p><strong>So let’s move，行动起来吧！</strong></p>
+<div class="references">
+
+</div>
+</section>]]></summary>
+</entry>
+
+</feed>
